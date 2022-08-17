@@ -6,12 +6,25 @@ const subtract = function(num,num2) {
 	return num - num2;
 };
 
-const sum = function(params) {
-	return num + num2;
+const sum = function(ar) {
+  let num = 0;
+	for(let i = 0; i < ar.length;i++){
+    num += ar[i]
+  }
+  if(isNaN(num)){
+    return  0;
+  } else {
+    return num;
+  }
+  
 };
 
-const multiply = function(num,num2) {
-  return num * num2;
+const multiply = function(ar) {
+  let num = 1;
+	for(let i = 0; i < ar.length;i++){
+    num *= ar[i]
+  }
+  return num;
 };
 
 const power = function(num,num2) {
@@ -19,7 +32,7 @@ const power = function(num,num2) {
 };
 
 const factorial = function(num) {
-  let fac = 0;
+  let fac = 1;
 	for(let i = 1; i<=num;i++){
     fac *= i;
   }
